@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emailing when it's cold</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --paper: #FFFCF0; --ink: #2D2B28; --muted: #6F6E69;
+    --line: #DAD8CE; --panel: #F2F0E5;
+    --blue: #205EA6; --cyan: #24837B; --green: #66800B;
+    --orange: #BC5215; --red: #AF3029; --purple: #5E409D;
+    --yellow: #AD8301; --magenta: #A02F6F;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #100F0F; --ink: #CECDC3; --muted: #878580;
+      --line: #403E3C; --panel: #1C1B1A;
+      --blue: #4385BE; --cyan: #3AA99F; --green: #879A39;
+      --orange: #DA702C; --red: #D14D41; --purple: #8B7EC8;
+      --yellow: #D0A215; --magenta: #CE5D97;
+    }
+  }
+
+  body {
+    font: 13px/1.5 'IBM Plex Mono', ui-monospace, monospace;
+    background: var(--paper); color: var(--ink);
+    padding: 40px 20px; max-width: 720px; margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.4em; font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    color: var(--muted); font-size: 0.85em;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+  }
+
+  .person {
+    padding: 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+
+  .person-header {
+    display: flex; align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap; gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .person-name {
+    font-size: 1.05em; font-weight: 500;
+  }
+
+  .person-name a {
+    color: var(--blue); text-decoration: none;
+  }
+  .person-name a:hover {
+    color: var(--cyan); text-decoration: underline;
+  }
+
+  .tag {
+    display: inline-block; padding: 1px 6px;
+    border-radius: 2px; font-size: 0.75em;
+    font-weight: 500; border: 1px solid;
+  }
+  .tag.pending { border-color: var(--orange); color: var(--orange); }
+  .tag.sent { border-color: var(--blue); color: var(--blue); }
+  .tag.replied { border-color: var(--green); color: var(--green); }
+  .tag.meeting { border-color: var(--purple); color: var(--purple); }
+
+  .person-role {
+    color: var(--muted); font-size: 0.85em;
+    margin-bottom: 6px;
+  }
+
+  .person-note {
+    font-size: 0.85em; line-height: 1.4;
+  }
+
+  .person-links {
+    margin-top: 8px; font-size: 0.82em;
+  }
+  .person-links a {
+    color: var(--cyan); text-decoration: none; margin-right: 12px;
+  }
+  .person-links a:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 40px; padding-top: 12px;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 0.78em;
+  }
+  </style>
+</head>
+<body>
+
+<h1>Emailing when it's cold</h1>
+<p class="subtitle">Cold outreach tracker</p>
+
+<div class="person">
+  <div class="person-header">
+    <span class="person-name"><a href="https://guzey.com/" target="_blank">Alexey Guzey</a></span>
+    <span class="tag pending">pending</span>
+  </div>
+  <div class="person-role">Founder, New Science</div>
+  <div class="person-note">
+    Advocates for young scientists, open science, and funding reform. Writes extensively on sleep, productivity, and institutional critique.
+  </div>
+  <div class="person-links">
+    <a href="https://guzey.com/" target="_blank">website</a>
+    <a href="https://twitter.com/alexeyguzey" target="_blank">twitter</a>
+  </div>
+</div>
+
+<footer>
+  Add more people by editing this file.
+</footer>
+
+</body>
+</html>
